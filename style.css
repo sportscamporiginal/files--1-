@@ -2054,3 +2054,27 @@ img{
     }
 
 }
+/* Mobile Projects Slider */
+
+@media (max-width:768px){
+
+.projects-slider{
+    display:flex;
+    overflow-x:auto;
+    gap:18px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:15px;
+}
+
+.projects-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.project-card{
+    min-width:85%;
+    flex:0 0 85%;
+    scroll-snap-align:center;
+}
+
+}

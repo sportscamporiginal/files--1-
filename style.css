@@ -1871,3 +1871,22 @@ img{
 }
 
 }
+/* ===== WHY US CARD TRANSPARENT ===== */
+
+.why-card{
+    background:rgba(255,255,255,0.08) !important;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.08); !important;
+
+    box-shadow:none !important;
+}
+
+.why-card h3{
+    color:#22c55e;
+}
+
+.why-card p{
+    color:#ffffff;
+}

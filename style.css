@@ -1833,3 +1833,30 @@ img{
     }
 
 }
+/* ===== Mobile Navbar Fix ===== */
+
+@media (max-width:768px){
+
+.navbar{
+    display:block !important;
+    background:#111827 !important;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 18px;
+}
+
+.logo-img{
+    width:140px;
+    height:auto;
+}
+
+}

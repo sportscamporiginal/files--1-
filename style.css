@@ -1833,4 +1833,16 @@ img{
     }
 
 }
+/* Mobile Menu Text Color */
+@media (max-width:768px){
 
+.nav-menu .nav-link{
+    color:#000 !important;
+}
+
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link.active{
+    color:#22c55e !important; /* Green active color */
+}
+
+}

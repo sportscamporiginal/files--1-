@@ -1482,8 +1482,13 @@ color:#555;
 }
 
 .stat-card p{
-    color:#555;
     font-size:16px;
+    color:#ffffff !important;
+    opacity:1 !important;
+    margin:0;
+    font-weight:500;
+    line-height:1.6;
+    text-shadow:0 2px 8px rgba(0,0,0,.6);
 }
 /* BENEFITS */
 

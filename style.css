@@ -142,7 +142,7 @@ z-index:9998;
     position:relative;
     font-size:14.5px;
     font-weight:600;
-    color:#ffffff;
+    color:#111827;
     padding:6px 0;
     transition:0.3s;
 }
@@ -193,6 +193,8 @@ z-index:9998;
     height:3px;
     background:#fff !important;   /* Black lines */
     border-radius:3px;
+}
+
 }
 
 .btn{ position:relative; display:inline-flex; align-items:center; justify-content:center; padding:15px 30px; border-radius:100px; font-weight:600; font-size:14.5px; letter-spacing:.01em; overflow:hidden; transition:transform .35s var(--ease), box-shadow .35s var(--ease); }
@@ -1239,15 +1241,17 @@ grid-template-columns:1fr;
 .nav-logo{
     display:flex;
     align-items:center;
-    gap:14px;
-    text-decoration:none;
+    gap:10px;
+    position:relative;
+    z-index:9999;
 }
 
 .logo-img{
-    width:180px;
+    width:170px;
     height:auto;
     display:block;
-    object-fit:contain;
+    position:relative;
+    z-index:9999;
 }
 /* ===== NAVBAR SIZE FIX ===== */
 
@@ -1458,16 +1462,17 @@ color:#555;
 }
 
 .stat-card{
-    background:transparent;
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    background:rgba(15,23,42,.45);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,.25);
+    border:1px solid rgba(255,255,255,.08);
 
-    padding:40px 20px;
     border-radius:20px;
-    text-align:center;
-    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    padding:22px 18px;
 }
 
 .stat-card:hover{
@@ -1490,7 +1495,6 @@ color:#555;
     line-height:1.6;
     text-shadow:0 2px 8px rgba(0,0,0,.6);
 }
-   
 /* BENEFITS */
 
 .benefits{
@@ -1741,6 +1745,147 @@ body{
 .top-left a,
 .top-right span{
     font-size:13px;
+}
+
+}
+@media (max-width:768px){
+
+.logo-img{
+    width:150px;
+    height:auto;
+}
+
+.nav-container{
+    padding:12px 18px;
+}
+
+}
+@media (max-width:768px){
+
+.nav-menu{
+    width:100%;
+    max-width:100%;
+}
+
+}
+@media (max-width:768px){
+
+.footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.footer-brand p{
+    max-width:100%;
+}
+
+.footer-bottom-inner{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+}
+@media (max-width:768px){
+
+.floating-btn{
+    width:55px;
+    height:55px;
+    right:15px;
+}
+
+.whatsapp{
+    bottom:85px;
+}
+
+.call{
+    bottom:18px;
+}
+
+}
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width:768px){
+
+    .footer-container{
+        display:flex;
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .footer-col{
+        width:100%;
+    }
+}
+/* ===== MOBILE OVERFLOW FIX ===== */
+
+@media (max-width:768px){
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+.container{
+    width:100%;
+    max-width:100%;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.footer,
+.footer-grid,
+.contact-grid,
+.contact-map,
+iframe{
+    width:100%;
+    max-width:100%;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+}
+/* ===== Hide Top Bar on Mobile ===== */
+
+@media (max-width:768px){
+
+    .top-bar{
+        display:none !important;
+    }
+
+    body{
+        padding-top:0 !important;
+    }
+
+    .navbar{
+        top:0 !important;
+    }
+
+}
+/* ===== WHY US CARD TRANSPARENT ===== */
+
+.why-card{
+    background:rgba(255,255,255,0.08) !important;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.08); !important;
+
+    box-shadow:none !important;
+}
+
+.why-card h3{
+    color:#22c55e;
+}
+
+.why-card p{
+    color:#ffffff;
 }
 
 }

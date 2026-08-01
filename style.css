@@ -1458,7 +1458,12 @@ color:#555;
 }
 
 .stat-card{
-    background:#fff;
+    background:transparent;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.25);
+
     padding:40px 20px;
     border-radius:20px;
     text-align:center;

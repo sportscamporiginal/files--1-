@@ -2041,3 +2041,16 @@ img{
 .why-card p{
     color:#ffffff;
 }
+/* ===== Desktop Menu White ===== */
+@media (min-width:769px){
+
+    .nav-link{
+        color:#ffffff !important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+        color:#22c55e !important;
+    }
+
+}

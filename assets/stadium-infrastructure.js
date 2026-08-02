@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra constructed our 5,000-seat multi-sport stadium complex seamlessly. The 1000 LUX floodlighting and tensile roof are world-class!', 'Er. Rajeshwar Rao', 'Chief Engineer, State Sports Infra Development', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['From civil earthworks and drainage to installing FIFA synthetic turf and stadium seating, their project management was impeccable.', 'Vikram Singh Deo', 'Chairman, District Sports Association', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['Their high-mast floodlight towers and digital scoreboards transformed our university arena into an HD broadcast-ready stadium.', 'Dr. Sunita Deshmukh', 'Dean of Student Affairs, National Sports University', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra constructed our 5,000-seat multi-sport stadium complex seamlessly. The 1000 LUX floodlighting and tensile roof are world-class!', 'Er. Rajeshwar Rao', 'Infra Development', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['From civil earthworks and drainage to installing FIFA synthetic turf and stadium seating, their project management was impeccable.', 'Vikram Singh Deo', 'Sports Association', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Their high-mast floodlight towers and digital scoreboards transformed our university arena into an HD broadcast-ready stadium.', 'Dr. Sunita Deshmukh', 'Sports University', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

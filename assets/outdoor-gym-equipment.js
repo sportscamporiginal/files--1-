@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra installed an 8-station open gym in our municipal park. Senior citizens and morning walkers love the smooth, rust-free equipment!', 'Dr. Arvind Deshmukh', 'Chief Executive Officer, Municipal Parks Dept', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['The dual-coat powder finish and rubber safety flooring look fantastic even after 2 heavy monsoon seasons. Zero rusting or breakdown!', 'Suresh Singhania', 'RWA President, Imperial Heights Society', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['From RCC foundation pads to equipment mounting and instruction boards, their team completed our resort fitness trail in just 10 days.', 'Nikhil Wadhwa', 'General Manager, Valley View Eco Resort', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra installed an 8-station open gym in our municipal park. Senior citizens and morning walkers love the smooth, rust-free equipment!', 'Dr. Arvind Deshmukh', 'Parks Dept', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['The dual-coat powder finish and rubber safety flooring look fantastic even after 2 heavy monsoon seasons. Zero rusting or breakdown!', 'Suresh Singhania', 'Heights Society', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['From RCC foundation pads to equipment mounting and instruction boards, their team completed our resort fitness trail in just 10 days.', 'Nikhil Wadhwa', 'Eco Resort', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

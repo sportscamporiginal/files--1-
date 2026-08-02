@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra installed 4 Teak wooden courts in our academy. The shock absorption is phenomenal and our players have zero knee fatigue!', 'Prakash Padukone Academy Coach', 'Senior Coach, Bangalore Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['The PVC synthetic mat rollout for our club court was executed seamlessly within 5 days. Excellent grip and high-bay lighting setup.', 'Venkatesh Rao', 'Sports Secretary, Officers Club', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['Top quality materials, BWF line precision, and continuous after-sales service. Highly recommended badminton court builder in India.', 'Smita Kulkarni', 'Director, Excellence Sports Hub', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra installed 4 Teak wooden courts in our academy. The shock absorption is phenomenal and our players have zero knee fatigue!', 'Prakash Padukone Academy Coach', 'Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['The PVC synthetic mat rollout for our club court was executed seamlessly within 5 days. Excellent grip and high-bay lighting setup.', 'Venkatesh Rao', 'Club', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Top quality materials, BWF line precision, and continuous after-sales service. Highly recommended badminton court builder in India.', 'Smita Kulkarni', 'Sports Hub', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

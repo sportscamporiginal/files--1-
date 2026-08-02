@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra supplied 30mm PKL-approved Kabaddi mats for our state training center. The interlocking grip and cushion during tackles are top notch!', 'Balwinder Singh', 'Head Coach, State Kabaddi Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['Zero mat shifting or gap formation even during intense tackle sessions. Excellent quality EVA mats and prompt 4-day installation.', 'Inspector Vijay Kumar', 'Sports In-Charge, Police Sports Complex', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['The non-abrasive friction texture on these mats prevents skin burns while giving raiders incredible push-off traction!', 'Rakesh Deshmukh', 'Founder, Pro Kabaddi Training Hub', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra supplied 30mm PKL-approved Kabaddi mats for our state training center. The interlocking grip and cushion during tackles are top notch!', 'Balwinder Singh', 'Kabaddi Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['Zero mat shifting or gap formation even during intense tackle sessions. Excellent quality EVA mats and prompt 4-day installation.', 'Inspector Vijay Kumar', 'Sports Complex', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['The non-abrasive friction texture on these mats prevents skin burns while giving raiders incredible push-off traction!', 'Rakesh Deshmukh', 'Training Hub', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

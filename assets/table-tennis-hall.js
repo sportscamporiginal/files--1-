@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra constructed a 6-table ITTF standard hall for our state academy. The PVC floor grip and anti-glare lights are perfect for national camps!', 'Ramanathan Iyer', 'General Secretary, State TT Association', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['The 6.0mm cushioned red PVC mats give our players incredible foot comfort during 4-hour training sessions. Outstanding quality!', 'Meenakshi Sundaram', 'Head Coach, Excellence TT Academy', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
-    ['Fast 12-day installation, seamless hot-welded seams, and robust surround barriers. Highly recommended indoor sports contractor!', 'Devendra Joshi', 'Sports Director, Modern Public School', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra constructed a 6-table ITTF standard hall for our state academy. The PVC floor grip and anti-glare lights are perfect for national camps!', 'Ramanathan Iyer', 'Association', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['The 6.0mm cushioned red PVC mats give our players incredible foot comfort during 4-hour training sessions. Outstanding quality!', 'Meenakshi Sundaram', 'Academy', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
+    ['Fast 12-day installation, seamless hot-welded seams, and robust surround barriers. Highly recommended indoor sports contractor!', 'Devendra Joshi', 'Public School', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

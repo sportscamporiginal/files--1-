@@ -2110,3 +2110,57 @@ img{
 }
 
 }
+/* ===== Mobile Navbar ===== */
+@media (max-width:768px){
+
+    .navbar{
+        min-height:60px !important;
+        padding:6px 0 !important;
+    }
+
+    .nav-container{
+        min-height:60px !important;
+        padding:0 18px !important;
+    }
+
+    .logo-img{
+        width:110px !important;
+        height:auto;
+    }
+
+    .nav-burger{
+        width:40px;
+        height:40px;
+    }
+
+    .hero{
+        padding-top:60px !important;
+    }
+
+}
+@media (max-width:768px){
+
+    .navbar{
+        min-height:65px !important;
+        padding:4px 0 !important;
+    }
+
+    .nav-container{
+        min-height:65px !important;
+        padding:0 16px !important;
+    }
+
+    .logo-img{
+        width:145px !important;   /* Logo bada */
+        height:auto;
+    }
+
+    .nav-logo{
+        margin:0;
+    }
+
+    .hero{
+        padding-top:65px !important;
+    }
+
+}

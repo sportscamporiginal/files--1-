@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra built our Box Cricket Arena in just 20 days. The true bounce on the pitch and high-grade netting have made it the #1 booked venue in our city!', 'Karan Malhotra', 'Founder, Turf Legends Box Arena', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['Our academy bowlers get natural seam reaction and spin grip on this pitch. The drainage is flawless even during monsoon downpours.', 'Rajesh Verma', 'Head Coach, National Cricket Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['From MS steel frame design to heavy-duty netting and LED lighting, their team handled everything seamlessly. Highly recommended!', 'Siddharth Patel', 'Managing Trustee, Sunrise Sports Club', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra built our Box Cricket Arena in just 20 days. The true bounce on the pitch and high-grade netting have made it the #1 booked venue in our city!', 'Karan Malhotra', 'Arena', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Our academy bowlers get natural seam reaction and spin grip on this pitch. The drainage is flawless even during monsoon downpours.', 'Rajesh Verma', 'Cricket Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['From MS steel frame design to heavy-duty netting and LED lighting, their team handled everything seamlessly. Highly recommended!', 'Siddharth Patel', 'Sports Club', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

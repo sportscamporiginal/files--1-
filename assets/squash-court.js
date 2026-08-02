@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra constructed 2 WSF-standard squash courts at our sports club. The wall rebound consistency and maple floor grip are outstanding!', 'Vikramaditya Rao', 'Honorary Secretary, Gymkhana Club', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['The hard plaster wall finish and 12mm glass back wall are built to perfection. Our national team players love training here.', 'Capt. Ranveer Singh', 'Head Coach, Officers Sports Complex', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['Flawless execution from civil damp-proofing to lighting and glass door fittings. The best squash court contractors in India!', 'Siddharth Merchant', 'Director, Apex Sports Academy', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra constructed 2 WSF-standard squash courts at our sports club. The wall rebound consistency and maple floor grip are outstanding!', 'Vikramaditya Rao', 'Club', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['The hard plaster wall finish and 12mm glass back wall are built to perfection. Our national team players love training here.', 'Capt. Ranveer Singh', 'Sports Complex', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Flawless execution from civil damp-proofing to lighting and glass door fittings. The best squash court contractors in India!', 'Siddharth Merchant', 'Sports Academy', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

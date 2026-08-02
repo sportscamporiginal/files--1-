@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra converted our school concrete slab into a 7-layer cushioned acrylic Tennis & Basketball court. The surface grip and vibrant colors are stunning!', 'Devendra Singh', 'Sports Director, St. Xavier Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['Our Pickleball members love the impact shock pad underlay. Knee strain has reduced significantly during long rallies. Excellent craftsmanship.', 'Meera Iyer', 'Secretary, Palm Meadows Club', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
-    ['Professional application team, zero line bleeding, and complete compliance with ITF specs. Best sports court contractor in India.', 'Rishi Kapoor', 'Managing Partner, Apex Tennis Academy', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra converted our school concrete slab into a 7-layer cushioned acrylic Tennis & Basketball court. The surface grip and vibrant colors are stunning!', 'Devendra Singh', 'Academy', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['Our Pickleball members love the impact shock pad underlay. Knee strain has reduced significantly during long rallies. Excellent craftsmanship.', 'Meera Iyer', 'Club', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
+    ['Professional application team, zero line bleeding, and complete compliance with ITF specs. Best sports court contractor in India.', 'Rishi Kapoor', 'Tennis Academy', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

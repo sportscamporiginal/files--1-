@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra built our school basketball court to FIBA standards. The cushion surface and tempered glass backboards are outstanding!', 'Fr. Thomas Joseph', 'Principal, St. Jude Higher Secondary School', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['The grip on this court is fantastic. Our players can execute sharp cuts and jumps without any fear of slipping. Great work!', 'Sunil Deshmukh', 'Head Basketball Coach, City Sports Complex', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['End-to-end execution was completed within 3 weeks. The LED lights and pole padding added a professional tournament feel.', 'Pooja Agarwal', 'President, Green Acres Township', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra built our school basketball court to FIBA standards. The cushion surface and tempered glass backboards are outstanding!', 'Fr. Joseph', 'Higher Secondary School', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['The grip on this court is fantastic. Our players can execute sharp cuts and jumps without any fear of slipping. Great work!', 'Sunil Deshmukh', 'Sports Complex', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['End-to-end execution was completed within 3 weeks. The LED lights and pole padding added a professional tournament feel.', 'Pooja Agarwal', 'Township', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

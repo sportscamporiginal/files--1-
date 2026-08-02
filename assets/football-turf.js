@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['The drainage system Sports Camp Infra installed handled the entire monsoon without a single puddle. Genuinely world-class work.', 'Rohan Mehta', 'Director, Ace Sports Academy', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['Our players immediately noticed the difference in ball roll and footing. It plays like a professional pitch.', 'Anita Sharma', 'Facilities Head, Greenfield Stadium', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
-    ['Transparent process, on-time delivery, and a maintenance team that actually responds. Highly recommended.', 'Vikram Rao', 'President, Riverside Sports Club', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
+    ['The drainage system Sports Camp Infra installed handled the entire monsoon without a single puddle. Genuinely world-class work.', 'Rohan Mehta', 'Sports Academy', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Our players immediately noticed the difference in ball roll and footing. It plays like a professional pitch.', 'Anita Sharma', 'club', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
+    ['Transparent process, on-time delivery, and a maintenance team that actually responds. Highly recommended.', 'Vikram Rao', 'Sports Club', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
   ];
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');
   document.getElementById('testiTrack').innerHTML = TESTIMONIALS.map(([quote,name,role,avatar]) => `

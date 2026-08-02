@@ -1003,6 +1003,7 @@ grid-template-columns:1fr;
     transform:translateY(-8px) scale(1.08);
     box-shadow:0 15px 35px rgba(34,197,94,.35);
 }
+
 .clients-slider img:hover{
     filter:none;
     opacity:1;

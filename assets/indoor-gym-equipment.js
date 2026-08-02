@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra equipped our 5,000 sq ft commercial gym in 14 days. The strength machines move super smooth and members love the setup!', 'Vikramaditya Oberoi', 'Founder, Muscle Works Gym Chain', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['Heavy-duty 4mm steel frames, tear-resistant leather, and customized logo plates. The best commercial gym supplier in India!', 'Ananya Sharma', 'Director, Fit Zone Fitness Club', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
-    ['From 3D CAD layout planning to heavy rubber flooring and cardio treadmill installation, their execution was flawless.', 'Rohan Mehta', 'General Manager, The Grand Hotel & Spa', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra equipped our 5,000 sq ft commercial gym in 14 days. The strength machines move super smooth and members love the setup!', 'Vikramaditya Oberoi', 'Gym Chain', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['Heavy-duty 4mm steel frames, tear-resistant leather, and customized logo plates. The best commercial gym supplier in India!', 'Ananya','Fitness Club', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop'],
+    ['From 3D CAD layout planning to heavy rubber flooring and cardio treadmill installation, their execution was flawless.', 'Rohan Mehta', 'Spa', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

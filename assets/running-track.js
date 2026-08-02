@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- TESTIMONIALS DATA ---------------- */
   const TESTIMONIALS = [
-    ['Sports Camp Infra built our university’s 400m 8-lane IAAF track in record time. Athletes have recorded personal bests on this high energy-return surface!', 'Dr. Colonel R. S. Rathore', 'Director of Sports, Central University Arena', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
-    ['The sandwich PU track system handles intense daily sprinting and spike shoes without any tearing or fading. Outstanding craftsmanship!', 'Coach Bikramjit Singh', 'Head Athletics Coach, State Sports Academy', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
-    ['Flawless asphalt base slope and slot drainage system. Even during heavy monsoon rains, the track is ready for athletes within 15 minutes.', 'Sanjay Deshmukh', 'Chief Engineer, Regional Sports Complex', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
+    ['Sports Camp Infra built our university’s 400m 8-lane IAAF track in record time. Athletes have recorded personal bests on this high energy-return surface!', 'Dr. Colonel R. S. Rathore', 'Arena', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop'],
+    ['The sandwich PU track system handles intense daily sprinting and spike shoes without any tearing or fading. Outstanding craftsmanship!', 'Coach Bikramjit Singh', 'Sports Academy', 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop'],
+    ['Flawless asphalt base slope and slot drainage system. Even during heavy monsoon rains, the track is ready for athletes within 15 minutes.', 'Sanjay Deshmukh', 'Sports Complex', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'],
   ];
 
   const starIcon = svg('<path d="M12 2l3 7h7l-5.5 4.3L18.5 21 12 16.7 5.5 21l2-7.7L2 9h7z" fill="currentColor" stroke="none"/>');

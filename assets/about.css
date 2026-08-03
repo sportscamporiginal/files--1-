@@ -169,7 +169,7 @@ section{ padding:110px 0; position:relative; }
         flex-direction:column;
         justify-content:center;
         align-items:flex-start;
-        padding:40px;
+        padding:38px;
         gap:24px;
         transition:right .4s;
     }

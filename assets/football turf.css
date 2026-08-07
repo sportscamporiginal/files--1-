@@ -5062,3 +5062,297 @@ section{padding:60px 0!important;}
     line-height: 1.6;
     margin: 0;
 }
+/* =========================================
+   BELLIN PIONEER 50MM SECTION (.bellin-grass-section)
+========================================= */
+.bellin-grass-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.bellin-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.bellin-image-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bellin-img-box {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+    height: 380px;
+    background: #f3f4f6;
+}
+
+.bellin-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bellin-img-box:hover img {
+    transform: scale(1.06);
+}
+
+.bellin-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(13, 138, 69, 0.35);
+}
+
+.bellin-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.bellin-mini-card {
+    background: var(--bg-light);
+    border: 1px solid #e5e7eb;
+    padding: 16px 12px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.bellin-mini-card:hover {
+    background: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(13, 138, 69, 0.1);
+}
+
+.bellin-mini-card i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.bellin-mini-card h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.bellin-mini-card span {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.bellin-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bellin-tag {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.bellin-header h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 14px;
+    line-height: 1.25;
+}
+
+.bellin-header p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.bellin-specs-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--bg-light);
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.spec-label-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.bellin-spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+}
+
+.spec-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.spec-label i {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.spec-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-align: right;
+}
+
+.bellin-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.bellin-feature-card {
+    background: #ffffff;
+    padding: 28px 22px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: 0.35s ease;
+}
+
+.bellin-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(13, 138, 69, 0.12);
+    border-color: var(--primary-color);
+}
+
+.feature-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.bellin-feature-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 6px;
+}
+
+.bellin-feature-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================
+        RESPONSIVE BREAKPOINTS (@media)
+========================================= */
+@media(max-width: 1200px) {
+    .hero-wrapper, .overview-wrapper, .structure-wrapper, .specification-wrapper, .cta-wrapper, .bellin-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .materials-timeline { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .process-wrapper { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .why-stats, .cta-features, .bellin-features-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .bellin-img-box { height: 320px; }
+}
+
+@media(max-width: 992px) {
+    .court-wrapper, .overview-features, .why-features {
+        grid-template-columns: 1fr;
+    }
+    .colour-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-content h1 { font-size: 40px; }
+    .overview-content h2, .section-title h2, .cta-content h2, .bellin-header h3 { font-size: 30px; }
+    .bellin-wrapper { gap: 35px; }
+}
+
+@media(max-width: 768px) {
+    .football-hero, .football-overview, .court-types, .court-colours, .bellin-grass-section, .court-structure, .materials-section, .construction-process, .court-specifications, .why-choose, .before-after, .final-cta, .faq-section {
+        padding: 60px 0;
+    }
+    .hero-highlights, .colour-wrapper, .specification-content, .bellin-features-grid {
+        grid-template-columns: 1fr;
+    }
+    .bellin-img-box { height: 260px; }
+    .bellin-badge { top: 14px; left: 14px; font-size: 12px; padding: 6px 14px; }
+    .bellin-highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .bellin-mini-card { padding: 12px 8px; border-radius: 12px; }
+    .bellin-mini-card h4 { font-size: 14px; }
+    .bellin-mini-card span { font-size: 11px; }
+
+    .bellin-specs-table { padding: 18px 14px; gap: 10px; border-radius: 16px; }
+    .spec-label-row { grid-template-columns: 1fr; gap: 10px; }
+    .bellin-spec-item { flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px; }
+    .spec-label { font-size: 13px; }
+    .spec-value { text-align: left; font-size: 13px; width: 100%; }
+
+    .bellin-feature-card { padding: 22px 18px; border-radius: 16px; gap: 12px; }
+    .feature-icon-wrapper { width: 46px; height: 46px; font-size: 18px; border-radius: 12px; }
+    .bellin-feature-card h4 { font-size: 16px; }
+
+    .materials-timeline { grid-template-columns: repeat(2, 1fr); }
+    .process-wrapper { grid-template-columns: repeat(2, 1fr); }
+    .why-stats { grid-template-columns: repeat(2, 1fr); }
+    .cta-features { grid-template-columns: 1fr; }
+    .hero-buttons, .cta-buttons { flex-direction: column; width: 100%; }
+    .hero-buttons a, .cta-btn { width: 100%; justify-content: center; }
+}
+
+@media(max-width: 480px) {
+    .hero-content h1 { font-size: 30px; }
+    .section-title h2, .bellin-header h3, .overview-content h2, .cta-content h2 { font-size: 26px; }
+    .section-title p, .bellin-header p { font-size: 14px; }
+    .materials-timeline, .process-wrapper, .why-stats { grid-template-columns: 1fr; }
+    .stat-item h3 { font-size: 32px; }
+    .bellin-highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    .bellin-spec-item { padding: 8px 10px; }
+}

@@ -289,6 +289,281 @@
 }
 
 /* =========================================
+   DEDICATED SWINGS & SLIDES SECTION (.swings-slides-section)
+========================================= */
+.swings-slides-section {
+    padding: 100px 0;
+    background: #ffffff;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.swings-slides-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.ss-card {
+    background: var(--bg-light);
+    border-radius: 24px;
+    padding: 36px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.ss-card:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(13, 138, 69, 0.12);
+    border-color: var(--primary-color);
+}
+
+.ss-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    background: #ffffff;
+    color: var(--primary-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: 0 8px 20px rgba(13, 138, 69, 0.15);
+}
+
+.ss-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.ss-tag {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.ss-content h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.ss-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ss-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.ss-features div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.ss-features div i {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+/* =========================================
+   DEDICATED EPDM RUBBER FLOORING SECTION (.epdm-flooring-section)
+========================================= */
+.epdm-flooring-section {
+    padding: 100px 0;
+    background: var(--bg-light);
+}
+
+.epdm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.epdm-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.epdm-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(13, 138, 69, 0.12);
+    border-color: var(--primary-color);
+}
+
+.epdm-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.epdm-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 12px;
+}
+
+.epdm-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.epdm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.epdm-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.epdm-list li i {
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+/* =========================================
+   DEDICATED INDOOR SOFT PLAY SECTION (.softplay-section)
+========================================= */
+.softplay-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.softplay-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.sp-card {
+    background: var(--bg-light);
+    border-radius: 24px;
+    padding: 36px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: all 0.35s ease;
+}
+
+.sp-card:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(13, 138, 69, 0.12);
+    border-color: var(--primary-color);
+}
+
+.sp-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    background: #ffffff;
+    color: var(--primary-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: 0 8px 20px rgba(13, 138, 69, 0.15);
+}
+
+.sp-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sp-badge {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.sp-content h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.sp-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sp-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.sp-features div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.sp-features div i {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+/* =========================================
    EQUIPMENT SHOWCASE TABS & CARDS (.equipment-categories)
 ========================================= */
 .equipment-categories {
@@ -1093,14 +1368,14 @@
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    .equipment-grid { grid-template-columns: 1fr; }
+    .swings-slides-grid, .epdm-grid, .softplay-grid, .equipment-grid { grid-template-columns: 1fr; }
     .materials-timeline { grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .process-wrapper { grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .why-stats, .cta-features { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
 
 @media(max-width: 992px) {
-    .overview-features, .why-features {
+    .overview-features, .why-features, .ss-card, .sp-card {
         grid-template-columns: 1fr;
     }
     .hero-content h1 { font-size: 40px; }
@@ -1110,10 +1385,10 @@
 }
 
 @media(max-width: 768px) {
-    .kids-hero, .kids-overview, .equipment-categories, .court-structure, .materials-section, .construction-process, .court-specifications, .why-choose, .before-after, .final-cta, .faq-section {
+    .kids-hero, .kids-overview, .swings-slides-section, .epdm-flooring-section, .softplay-section, .equipment-categories, .court-structure, .materials-section, .construction-process, .court-specifications, .why-choose, .before-after, .final-cta, .faq-section {
         padding: 60px 0;
     }
-    .hero-highlights, .specification-content {
+    .hero-highlights, .specification-content, .ss-features, .sp-features {
         grid-template-columns: 1fr;
     }
     .materials-timeline { grid-template-columns: repeat(2, 1fr); }
@@ -1130,5 +1405,5 @@
     .section-title p { font-size: 14px; }
     .materials-timeline, .process-wrapper, .why-stats { grid-template-columns: 1fr; }
     .stat-item h3 { font-size: 32px; }
-    .equip-card { padding: 22px 18px; }
+    .equip-card, .ss-card, .epdm-card, .sp-card { padding: 22px 18px; }
 }

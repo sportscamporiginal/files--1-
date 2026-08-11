@@ -330,7 +330,7 @@
 
 .hero-image::after{
 
-    content:"Premium Wooden/Acrylic Courts";
+    content:"Premium Acrylic Courts";
 
     position:absolute;
 
@@ -872,15 +872,11 @@ grid-template-columns:1fr;
 }
 
 .court-wrapper{
-
     display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
-    margin-top:60px;
-
+    grid-template-columns:1fr;
+    max-width:900px;
+    margin:60px auto 0;
+}
 }
 
 .court-card{
@@ -4661,4 +4657,1076 @@ h1{font-size:30px!important;}
 .cta-content h2{font-size:38px!important;}
 .cta-content h2 span{font-size:46px!important;}
 section{padding:60px 0!important;}
+}
+/* =========================================
+   ARTIFICIAL GRASS DETAILS (.grass-details-section)
+========================================= */
+.grass-details-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.grass-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.grass-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.grass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(13, 138, 69, 0.12);
+    border-color: var(--primary-color);
+}
+
+.grass-card.featured {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 15px 35px rgba(13, 138, 69, 0.15);
+}
+
+.grass-image {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.grass-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.grass-card:hover .grass-image img {
+    transform: scale(1.08);
+}
+
+.grass-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(16, 24, 40, 0.85);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+}
+
+.grass-badge.primary {
+    background: var(--primary-color);
+}
+
+.grass-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.grass-body h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.grass-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.grass-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+    background: var(--bg-light);
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.spec-row span {
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spec-row span i {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.spec-row strong {
+    color: var(--dark-color);
+    font-weight: 700;
+    text-align: right;
+}
+
+.grass-features-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    background: var(--bg-light);
+    padding: 36px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.grass-feature-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.grass-feature-item i {
+    font-size: 26px;
+    color: var(--primary-color);
+    background: #ffffff;
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    min-width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grass-feature-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 6px;
+}
+
+.grass-feature-item p {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+/* =========================================
+  /* =========================================
+   BELLIN PIONEER 50MM SECTION (.bellin-grass-section)
+========================================= */
+.bellin-grass-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.bellin-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.bellin-image-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bellin-img-box {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+    height: 380px;
+    background: #f3f4f6;
+}
+
+.bellin-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bellin-img-box:hover img {
+    transform: scale(1.06);
+}
+
+.bellin-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(13, 138, 69, 0.35);
+}
+
+.bellin-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.bellin-mini-card {
+    background: var(--bg-light);
+    border: 1px solid #e5e7eb;
+    padding: 16px 12px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.bellin-mini-card:hover {
+    background: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(13, 138, 69, 0.1);
+}
+
+.bellin-mini-card i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.bellin-mini-card h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.bellin-mini-card span {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.bellin-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bellin-tag {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.bellin-header h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 14px;
+    line-height: 1.25;
+}
+
+.bellin-header p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.bellin-specs-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--bg-light);
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.spec-label-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.bellin-spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #edf2f7;
+}
+
+.spec-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.spec-label i {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.spec-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-align: right;
+}
+
+.bellin-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.bellin-feature-card {
+    background: #ffffff;
+    padding: 28px 22px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: 0.35s ease;
+}
+
+.bellin-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(13, 138, 69, 0.12);
+    border-color: var(--primary-color);
+}
+
+.feature-icon-wrapper {
+    width: 54px;
+    height: 54px;
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.bellin-feature-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 6px;
+}
+
+.bellin-feature-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================
+        RESPONSIVE BREAKPOINTS (@media)
+========================================= */
+@media(max-width: 1200px) {
+    .hero-wrapper, .overview-wrapper, .structure-wrapper, .specification-wrapper, .cta-wrapper, .bellin-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .materials-timeline { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .process-wrapper { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .why-stats, .cta-features, .bellin-features-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .bellin-img-box { height: 320px; }
+}
+
+@media(max-width: 992px) {
+    .court-wrapper, .overview-features, .why-features {
+        grid-template-columns: 1fr;
+    }
+    .colour-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-content h1 { font-size: 40px; }
+    .overview-content h2, .section-title h2, .cta-content h2, .bellin-header h3 { font-size: 30px; }
+    .bellin-wrapper { gap: 35px; }
+}
+
+@media(max-width: 768px) {
+    .football-hero, .football-overview, .court-types, .court-colours, .bellin-grass-section, .court-structure, .materials-section, .construction-process, .court-specifications, .why-choose, .before-after, .final-cta, .faq-section {
+        padding: 60px 0;
+    }
+    .hero-highlights, .colour-wrapper, .specification-content, .bellin-features-grid {
+        grid-template-columns: 1fr;
+    }
+    .bellin-img-box { height: 260px; }
+    .bellin-badge { top: 14px; left: 14px; font-size: 12px; padding: 6px 14px; }
+    .bellin-highlights-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .bellin-mini-card { padding: 12px 8px; border-radius: 12px; }
+    .bellin-mini-card h4 { font-size: 14px; }
+    .bellin-mini-card span { font-size: 11px; }
+
+    .bellin-specs-table { padding: 18px 14px; gap: 10px; border-radius: 16px; }
+    .spec-label-row { grid-template-columns: 1fr; gap: 10px; }
+    .bellin-spec-item { flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px; }
+    .spec-label { font-size: 13px; }
+    .spec-value { text-align: left; font-size: 13px; width: 100%; }
+
+    .bellin-feature-card { padding: 22px 18px; border-radius: 16px; gap: 12px; }
+    .feature-icon-wrapper { width: 46px; height: 46px; font-size: 18px; border-radius: 12px; }
+    .bellin-feature-card h4 { font-size: 16px; }
+
+    .materials-timeline { grid-template-columns: repeat(2, 1fr); }
+    .process-wrapper { grid-template-columns: repeat(2, 1fr); }
+    .why-stats { grid-template-columns: repeat(2, 1fr); }
+    .cta-features { grid-template-columns: 1fr; }
+    .hero-buttons, .cta-buttons { flex-direction: column; width: 100%; }
+    .hero-buttons a, .cta-btn { width: 100%; justify-content: center; }
+}
+
+@media(max-width: 480px) {
+    .hero-content h1 { font-size: 30px; }
+    .section-title h2, .bellin-header h3, .overview-content h2, .cta-content h2 { font-size: 26px; }
+    .section-title p, .bellin-header p { font-size: 14px; }
+    .materials-timeline, .process-wrapper, .why-stats { grid-template-columns: 1fr; }
+    .stat-item h3 { font-size: 32px; }
+    .bellin-highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    .bellin-spec-item { padding: 8px 10px; }
+}
+/* =========================================================
+   HOCKEY TURF - MOBILE RESPONSIVE FIX
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Prevent horizontal overflow */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Main sections */
+    section,
+    .container,
+    .section-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* -----------------------------------------------------
+       COMPARISON / TURF SPECIFICATION SECTION
+       ----------------------------------------------------- */
+
+    .comparison-section,
+    .comparison-container,
+    .specs-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: hidden;
+    }
+
+    /* If comparison cards are in a row */
+    .comparison-grid,
+    .comparison-cards,
+    .specs-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 18px !important;
+    }
+
+    /* Individual comparison card */
+    .comparison-card,
+    .spec-card,
+    .comparison-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURES SECTION
+       ----------------------------------------------------- */
+
+    .features-grid,
+    .feature-grid,
+    .benefits-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 16px !important;
+    }
+
+    .feature-card,
+    .benefit-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURE CONTENT
+       ----------------------------------------------------- */
+
+    .feature-card h3,
+    .benefit-card h3 {
+        font-size: 19px !important;
+        line-height: 1.35 !important;
+    }
+
+    .feature-card p,
+    .benefit-card p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       TURF STRUCTURE SECTION
+       ----------------------------------------------------- */
+
+    .turf-structure,
+    .structure-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 55px 18px !important;
+        overflow: hidden;
+    }
+
+    .turf-structure h2,
+    .structure-section h2 {
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------------------
+       IMAGES
+       ----------------------------------------------------- */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .comparison-card img,
+    .feature-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       TABLE / FLEX CONTENT
+       ----------------------------------------------------- */
+
+    .comparison-table,
+    .spec-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto;
+    }
+
+    .comparison-table table,
+    .spec-table table {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       FLEX ROWS
+       ----------------------------------------------------- */
+
+    .comparison-row,
+    .feature-row,
+    .benefits-row {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 16px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       REMOVE FIXED WIDTHS
+       ----------------------------------------------------- */
+
+    .comparison-card,
+    .feature-card,
+    .benefit-card,
+    .spec-card,
+    .comparison-item,
+    .comparison-grid,
+    .features-grid,
+    .feature-grid {
+        min-width: 0 !important;
+    }
+
+}
+/* =========================================================
+   HOCKEY TURF — MOBILE NAVBAR FIX
+   Desktop layout untouched
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        position: sticky !important;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-container {
+        width: 100%;
+        max-width: 100%;
+        min-height: 68px;
+        padding: 10px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    /* LOGO */
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .logo-img {
+        width: 145px;
+        max-width: 145px;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* HIDE DESKTOP MENU */
+    .nav-menu {
+        display: none !important;
+    }
+
+    /* HIDE DESKTOP QUOTE BUTTON */
+    .nav-cta {
+        display: none !important;
+    }
+
+    /* HAMBURGER */
+    .nav-burger {
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 0;
+        background: #ffffff;
+        border-radius: 12px;
+
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        cursor: pointer;
+        flex-shrink: 0;
+
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-burger span {
+        display: block;
+        width: 21px;
+        height: 2px;
+        border-radius: 5px;
+        background: #111827;
+        transition: 0.3s ease;
+    }
+
+    /* MOBILE MENU OPEN */
+    .nav-menu.active {
+        display: flex !important;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 12px 18px 18px;
+        gap: 4px;
+
+        background: #ffffff;
+        border-top: 1px solid #eeeeee;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+    }
+
+    .nav-menu.active .nav-link {
+        display: block;
+        width: 100%;
+        padding: 14px 12px;
+
+        font-size: 15px;
+        color: #111827;
+        text-decoration: none;
+
+        border-radius: 10px;
+    }
+
+    .nav-menu.active .nav-link:hover,
+    .nav-menu.active .nav-link.active {
+        background: #eaf8ef;
+        color: var(--primary-color);
+    }
+
+    /* HERO */
+    .hockey-hero {
+        padding: 45px 0 60px;
+    }
+
+    .hockey-hero .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .hero-wrapper {
+        display: flex !important;
+        flex-direction: column;
+        gap: 28px !important;
+    }
+
+    /* Breadcrumb first */
+    .hero-content {
+        display: contents;
+    }
+
+    .hero-breadcrumb {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+
+    /* Hero image */
+    .hero-image {
+        order: 2;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 18px;
+    }
+
+    /* Badge */
+    .hero-badge {
+        order: 3;
+        margin: 0 auto;
+        font-size: 12px;
+        padding: 9px 16px;
+        text-align: center;
+    }
+
+    /* Heading */
+    .hero-content h1 {
+        order: 4;
+        width: 100%;
+        margin: 0;
+        font-size: 32px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* Description */
+    .hero-content > p {
+        order: 5;
+        width: 100%;
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        order: 6;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column !important;
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 52px;
+    }
+
+    /* Highlights */
+    .hero-highlights {
+        order: 7;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+
+    .hero-highlights div {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 14px;
+        font-size: 13px;
+        text-align: left;
+    }
+
+    /* OVERVIEW */
+    .hockey-overview {
+        padding: 60px 0;
+    }
+
+    .hockey-overview .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .overview-wrapper {
+        display: flex !important;
+        flex-direction: column;
+        gap: 32px !important;
+    }
+
+    .overview-image {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .overview-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 18px;
+    }
+
+    .overview-content {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    .overview-content h2 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .overview-content > p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .overview-features {
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+    }
+
+    .overview-card {
+        text-align: left;
+        padding: 18px;
+    }
+
+    /* GRASS CARDS */
+    .grass-details-section {
+        padding: 60px 0;
+    }
+
+    .grass-details-section .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .grass-grid {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+        width: 100%;
+    }
+
+    .grass-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .grass-image {
+        height: 230px;
+    }
+
+    .grass-body {
+        padding: 22px;
+    }
+
+    .grass-body h3 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .grass-desc {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .grass-specs {
+        width: 100%;
+    }
+
+    .spec-row {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .spec-row strong {
+        max-width: 100%;
+        text-align: right;
+    }
+
+    /* GRASS FEATURES */
+    .grass-features-bar {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    .grass-feature-item {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .nav-container {
+        min-height: 62px;
+        padding: 9px 14px;
+    }
+
+    .logo-img {
+        width: 125px;
+        max-width: 125px;
+    }
+
+    .nav-burger {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-menu.active {
+        top: 62px;
+    }
+
+    .hockey-hero {
+        padding-top: 32px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content h1 span {
+        display: inline;
+    }
+
+    .hero-badge {
+        font-size: 11px;
+    }
+
+    .hero-image img {
+        border-radius: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 27px !important;
+        line-height: 1.25;
+    }
+
+    .section-title p {
+        font-size: 14px !important;
+        line-height: 1.7;
+    }
+
+    .grass-image {
+        height: 210px;
+    }
+
+    .grass-body {
+        padding: 18px;
+    }
 }

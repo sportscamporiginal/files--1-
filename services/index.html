@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Equipment | Indoor &amp; Outdoor Gym Solutions | SportsCamp</title>
+<meta name="description" content="SportsCamp provides complete indoor and outdoor gym equipment solutions — cardio, strength, functional, free weights and outdoor fitness equipment for schools, institutions and commercial spaces.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!-- =============== HERO =============== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Gym Equipment</div>
+      <h1 id="heroTitle">COMPLETE INDOOR<br>GYM <span class="accent">SOLUTIONS</span></h1>
+      <div class="hero-sub" id="heroSub">Indoor Gym Equipment</div>
+      <p class="hero-desc" id="heroDesc">SportsCamp supplies complete indoor gym equipment — cardio, strength, functional and free-weight machines — built for schools, institutions and commercial fitness spaces.</p>
+      <div class="hero-ctas">
+        <a href="#equipment" class="btn btn-primary">Explore Equipment</a>
+        <a href="#contact" class="btn btn-outline">Get a Quote</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-media-frame">
+        <img id="heroImg" src="assets/img/functional-gym-smith-cable.jpg" alt="Indoor commercial gym equipment">
+      </div>
+      <div class="hero-badge">
+        <div>
+          <div class="num">20+</div>
+          <div class="lbl">Years supplying gym infrastructure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- =============== ENVIRONMENT SELECTOR =============== -->
+<section class="selector-section wrap">
+  <h2>Choose Your Gym Environment</h2>
+  <p class="sub">Select indoor, outdoor gym or flooring solutions to explore our range.</p>
+  <div class="env-pill" role="tablist" aria-label="Gym environment">
+    <button class="env-btn is-active" id="btnIndoor" role="tab" aria-selected="true"><span class="ic">🏋️</span> Indoor Gym</button>
+    <button class="env-btn" id="btnOutdoor" role="tab" aria-selected="false"><span class="ic">🌳</span> Outdoor Gym</button>
+    <button class="env-btn" id="btnFlooring" role="tab" aria-selected="false"><span class="ic">▦</span> Gym Flooring</button>
+  </div>
+</section>
+
+<!-- =============== EQUIPMENT (INDOOR / OUTDOOR) =============== -->
+<div id="equipment"></div>
+
+<div id="modalRoot"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

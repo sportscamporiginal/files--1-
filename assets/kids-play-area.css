@@ -1133,22 +1133,35 @@
     .equip-card { padding: 22px 18px; }
 }
 /* =========================================================
-   MOBILE IMAGE ORDER FIX
-   Desktop layout remains unchanged
+   MOBILE HERO ORDER
+   Breadcrumb → Image → Content
+   Desktop remains unchanged
    ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* Hero section */
     .hero-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 35px;
+        gap: 30px;
     }
 
-    /* Hero image sabse pehle */
+    /* Hero content ke andar ke elements ko
+       hero-wrapper ke direct items ki tarah treat kare */
+    .hero-content {
+        display: contents;
+    }
+
+    /* 1 — Home / Services / Current Page */
+    .hero-breadcrumb {
+        order: 1;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* 2 — Main Hero Image */
     .hero-image {
-        order: -1;
+        order: 2;
         width: 100%;
     }
 
@@ -1159,13 +1172,37 @@
         border-radius: 20px;
     }
 
-    /* Hero content image ke baad */
-    .hero-content {
-        order: 1;
-        width: 100%;
+    /* 3 — Badge */
+    .hero-badge {
+        order: 3;
+        width: fit-content;
+        margin-bottom: 0;
     }
 
-    /* Overview section */
+    /* 4 — Heading */
+    .hero-content h1 {
+        order: 4;
+        margin-bottom: 0;
+    }
+
+    /* 5 — Description */
+    .hero-content > p {
+        order: 5;
+        margin-bottom: 0;
+    }
+
+    /* 6 — Buttons */
+    .hero-buttons {
+        order: 6;
+        margin-bottom: 0;
+    }
+
+    /* 7 — Highlights */
+    .hero-highlights {
+        order: 7;
+    }
+
+    /* Overview */
     .overview-wrapper {
         display: flex;
         flex-direction: column;

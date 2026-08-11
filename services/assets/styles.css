@@ -346,3 +346,389 @@ footer{background:#12181a;color:#c9cdc9;padding:60px 0 28px;margin-top:0;}
 .flooring-note p{max-width:650px;color:var(--body);margin:0;line-height:1.6;}
 @media(max-width:900px){.flooring-grid{grid-template-columns:repeat(2,1fr);}.flooring-note{align-items:flex-start;flex-direction:column;}}
 @media(max-width:600px){.flooring-grid{grid-template-columns:1fr;}.floor-visual{height:160px;}.flooring-note{padding:24px;}.flooring-note h3{font-size:21px;}}
+/* ==========================================================
+   MOBILE RESPONSIVE - SPORTS CAMP GYM EQUIPMENT
+   ========================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    /* Main container */
+    .wrap {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Sections */
+    .section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .section-tight {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    .hero-copy h1 {
+        font-size: 38px;
+        line-height: 1.08;
+    }
+
+    .hero-sub {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-ctas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .hero-media {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .hero-media-frame {
+        width: 100%;
+        min-height: 300px;
+        border-radius: 18px;
+    }
+
+
+    /* =========================
+       SELECTOR
+       ========================= */
+
+    .selector-section {
+        padding-top: 40px;
+    }
+
+    .selector-section h2 {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+
+    .selector-section .sub {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .env-pill {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 6px;
+        margin-top: 20px;
+    }
+
+    .env-btn {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       CATEGORY HEAD
+       ========================= */
+
+    .cat-head {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .cat-head h3 {
+        font-size: 22px;
+        line-height: 1.25;
+    }
+
+    .cat-desc {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 8px;
+    }
+
+
+    /* =========================
+       PRODUCT CARDS
+       ========================= */
+
+    .grid,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .card-img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-body h4 {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .card-body p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+
+    /* =========================
+       RANGE BUTTONS
+       ========================= */
+
+    .pill-row {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding-bottom: 10px;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .pill-row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .range-pill {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        min-height: 42px;
+        padding: 10px 15px;
+    }
+
+
+    /* =========================
+       FEATURE CARDS
+       ========================= */
+
+    .feature-card {
+        grid-template-columns: 1fr !important;
+    }
+
+    .feature-card .f-img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+    }
+
+    .feature-card .f-body {
+        padding: 18px;
+    }
+
+    .feature-card h4 {
+        font-size: 19px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .feature-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .feature-actions .btn {
+        width: 100%;
+    }
+
+
+    /* =========================
+       GYM FLOORING
+       ========================= */
+
+    .flooring-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .floor-card {
+        width: 100%;
+    }
+
+    .floor-visual {
+        width: 100%;
+        height: 160px;
+    }
+
+    .floor-body {
+        padding: 18px;
+    }
+
+    .floor-body h4 {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .floor-body p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .flooring-note {
+        padding: 20px;
+    }
+
+    .flooring-note h3 {
+        font-size: 20px;
+    }
+
+    .flooring-note p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       MODAL / PRODUCT POPUP
+       ========================= */
+
+    .modal-overlay {
+        padding: 10px;
+    }
+
+    .modal {
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100vh - 20px);
+        overflow-y: auto;
+        border-radius: 16px;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .modal-img {
+        min-height: 190px;
+    }
+
+    .modal-img img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .modal-body {
+        padding: 20px 18px 24px;
+    }
+
+    .modal-body h3 {
+        font-size: 21px;
+        line-height: 1.3;
+    }
+
+    .modal-close {
+        width: 38px;
+        height: 38px;
+        top: 8px;
+        right: 8px;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 420px) {
+
+    .wrap {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .hero-copy h1 {
+        font-size: 32px;
+    }
+
+    .hero-sub {
+        font-size: 15px;
+    }
+
+    .selector-section h2 {
+        font-size: 22px;
+    }
+
+    .env-btn {
+        font-size: 13px;
+    }
+
+    .card-body {
+        padding: 14px;
+    }
+
+    .feature-card .f-body {
+        padding: 16px;
+    }
+
+    .floor-body {
+        padding: 16px;
+    }
+
+}

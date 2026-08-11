@@ -1132,3 +1132,59 @@
     .stat-item h3 { font-size: 32px; }
     .equip-card { padding: 22px 18px; }
 }
+/* =========================================================
+   MOBILE IMAGE ORDER FIX
+   Desktop layout remains unchanged
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Hero section */
+    .hero-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    /* Hero image sabse pehle */
+    .hero-image {
+        order: -1;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 20px;
+    }
+
+    /* Hero content image ke baad */
+    .hero-content {
+        order: 1;
+        width: 100%;
+    }
+
+    /* Overview section */
+    .overview-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .overview-image {
+        order: 2;
+        width: 100%;
+    }
+
+    .overview-content {
+        order: 1;
+        width: 100%;
+    }
+
+    .overview-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}

@@ -61,8 +61,8 @@ const SERVICES = [
   /* ---------------- DATA: SPORTS WE COVER ---------------- */
   const SPORTS = [
     ['Football','ball'],['Cricket','ball'],['Basketball','hoop'],['Badminton','shuttle'],
-    ['Pickleball','court'],['Kabaddi','mat'],['Squash','square'],['Tennis','court'],
-    ['Athletics','track'],['Gym','dumbbell'],['Kids Play Area','heart'],
+    ['Pickleball','court'],['Squash','square'],['Tennis','court'],
+    ['Gym','dumbbell'],['Kids Play Area','heart'],
   ];
   const sportsGrid = document.getElementById('sportsGrid');
   if (sportsGrid){

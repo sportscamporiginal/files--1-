@@ -78,26 +78,719 @@ const SERVICES = [
   const marqueeTrack = document.getElementById('marqueeTrack');
   if (marqueeTrack){ marqueeTrack.innerHTML += marqueeTrack.innerHTML; }
 
-  /* ---------------- LOADER ---------------- */
-  const loader = document.getElementById('loader');
-  const loaderFill = document.getElementById('loaderFill');
-  const loaderPercent = document.getElementById('loaderPercent');
-  let progress = 0;
-  const loadInterval = setInterval(() => {
-    progress += Math.random()*18 + 6;
-    if (progress >= 100){
-      progress = 100;
-      clearInterval(loadInterval);
-      setTimeout(() => {
-        loader.classList.add('hide');
-        document.documentElement.classList.remove('no-scroll');
-        setTimeout(()=> loader.remove(), 900);
-      }, 250);
+  /* ---------------- SPORTS INFRASTRUCTURE LOADER ---------------- */
+
+const loader = document.getElementById('loader');
+const loaderFill = document.getElementById('loaderFill');
+const loaderPercent = document.getElementById('loaderPercent');
+
+document.documentElement.classList.add('no-scroll');
+
+
+/* ===============================
+   INFRASTRUCTURE LOADER DESIGN
+   =============================== */
+
+const loaderStyle = document.createElement('style');
+
+loaderStyle.textContent = `
+
+#loader {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 999999 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,200,83,.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #050807,
+            #09120d,
+            #030504
+        ) !important;
+
+    overflow: hidden !important;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease !important;
+}
+
+
+/* Blueprint grid */
+
+#loader::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .18;
+
+    background-image:
+        linear-gradient(
+            rgba(0,200,83,.12) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0,200,83,.12) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 30%,
+            black 70%,
+            transparent
+        );
+}
+
+
+/* Bottom infrastructure text */
+
+#loader::after {
+
+    content:
+        "SPORTS INFRASTRUCTURE • COURTS • TURF • GYM • STADIUM";
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,.32);
+
+    white-space: nowrap;
+}
+
+
+/* Hide */
+
+#loader.hide {
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+
+}
+
+
+/* Main loader */
+
+#loader .loader-inner {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(560px, 86vw);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* ===============================
+   SPORTS COURT BLUEPRINT
+   =============================== */
+
+#loader .loader-blueprint {
+
+    position: relative;
+
+    width: min(420px, 78vw);
+
+    height: 190px;
+
+    margin-bottom: 28px;
+
+    border:
+
+        1px solid
+        rgba(0,200,83,.25);
+
+    border-radius: 8px;
+
+    background:
+
+        rgba(0,200,83,.025);
+
+    box-shadow:
+
+        0 0 45px
+        rgba(0,200,83,.08),
+
+        inset 0 0 35px
+        rgba(0,200,83,.025);
+
+    overflow: hidden;
+
+}
+
+
+/* Court outer boundary */
+
+#loader .loader-blueprint::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 10%;
+
+    right: 10%;
+
+    top: 14%;
+
+    bottom: 14%;
+
+    border:
+
+        2px solid
+        rgba(255,255,255,.75);
+
+    border-radius: 3px;
+
+}
+
+
+/* Centre line */
+
+#loader .loader-blueprint::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 14%;
+
+    bottom: 14%;
+
+    left: 50%;
+
+    width: 2px;
+
+    background:
+
+        rgba(255,255,255,.7);
+
+    transform:
+
+        translateX(-50%);
+
+}
+
+
+/* Animated construction lines */
+
+#loader .infra-line {
+
+    position: absolute;
+
+    background:
+
+        #00c853;
+
+    box-shadow:
+
+        0 0 12px
+        rgba(0,230,118,.6);
+
+    animation:
+
+        infraDraw
+        1.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* Top */
+
+#loader .infra-line.one {
+
+    left: 10%;
+
+    top: 14%;
+
+    width: 80%;
+
+    height: 2px;
+
+}
+
+
+/* Bottom */
+
+#loader .infra-line.two {
+
+    left: 10%;
+
+    bottom: 14%;
+
+    width: 80%;
+
+    height: 2px;
+
+    animation-delay: .3s;
+
+}
+
+
+/* Left */
+
+#loader .infra-line.three {
+
+    left: 10%;
+
+    top: 14%;
+
+    width: 2px;
+
+    height: 72%;
+
+    animation-delay: .6s;
+
+}
+
+
+/* Right */
+
+#loader .infra-line.four {
+
+    right: 10%;
+
+    top: 14%;
+
+    width: 2px;
+
+    height: 72%;
+
+    animation-delay: .9s;
+
+}
+
+
+/* Centre circle */
+
+#loader .infra-center {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 50px;
+
+    height: 50px;
+
+    border:
+
+        1px solid
+        rgba(0,200,83,.7);
+
+    border-radius: 50%;
+
+    transform:
+
+        translate(-50%,-50%);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(0,200,83,.15);
+
+}
+
+
+/* Brand */
+
+#loader .loader-word {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+#loader .loader-word
+.loader-accent {
+
+    color: #00c853;
+
+}
+
+
+/* Tagline */
+
+#loader .loader-tagline {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color:
+
+        rgba(255,255,255,.5);
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Progress */
+
+#loader .loader-bar-track {
+
+    width:
+
+        min(430px,78vw);
+
+    height: 4px;
+
+    border-radius: 100px;
+
+    background:
+
+        rgba(255,255,255,.12);
+
+    overflow: hidden;
+
+}
+
+
+#loader .loader-bar-fill {
+
+    width: 0;
+
+    height: 100%;
+
+    border-radius: 100px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #00a844,
+            #00e676
+        );
+
+    box-shadow:
+
+        0 0 14px
+        rgba(0,230,118,.5);
+
+    transition:
+
+        width .06s linear;
+
+}
+
+
+/* Percentage */
+
+#loader .loader-percent {
+
+    margin-top: 11px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color:
+
+        rgba(255,255,255,.6);
+
+}
+
+
+/* Animation */
+
+@keyframes infraDraw {
+
+    0%,
+    100% {
+
+        opacity: .35;
+
+        transform: scaleX(.65);
+
     }
-    loaderFill.style.width = progress + '%';
-    loaderPercent.textContent = Math.floor(progress) + '%';
-  }, 180);
-  document.documentElement.classList.add('no-scroll');
+
+    50% {
+
+        opacity: 1;
+
+        transform: scaleX(1);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width:480px) {
+
+    #loader .loader-blueprint {
+
+        width: 84vw;
+
+        height: 145px;
+
+    }
+
+
+    #loader .loader-word {
+
+        font-size: 22px;
+
+    }
+
+
+    #loader .loader-tagline {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    #loader::after {
+
+        font-size: 6px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+}
+
+`;
+
+document.head.appendChild(loaderStyle);
+
+
+/* ===============================
+   CREATE BLUEPRINT
+   =============================== */
+
+const blueprint =
+    document.createElement('div');
+
+blueprint.className =
+    'loader-blueprint';
+
+blueprint.innerHTML = `
+
+    <span class="infra-line one"></span>
+
+    <span class="infra-line two"></span>
+
+    <span class="infra-line three"></span>
+
+    <span class="infra-line four"></span>
+
+    <span class="infra-center"></span>
+
+`;
+
+
+const loaderInner =
+    loader.querySelector(
+        '.loader-inner'
+    );
+
+
+if (loaderInner) {
+
+    /* Remove football */
+
+    const oldBall =
+        loaderInner.querySelector(
+            '.loader-ball'
+        );
+
+    if (oldBall) {
+
+        oldBall.remove();
+
+    }
+
+
+    /* Add blueprint */
+
+    const oldWord =
+        loaderInner.querySelector(
+            '.loader-word'
+        );
+
+    loaderInner.insertBefore(
+        blueprint,
+        oldWord || loaderInner.firstChild
+    );
+
+
+    /* Add tagline */
+
+    if (
+        !loaderInner.querySelector(
+            '.loader-tagline'
+        )
+    ) {
+
+        const tagline =
+            document.createElement('div');
+
+        tagline.className =
+            'loader-tagline';
+
+        tagline.textContent =
+            'BUILDING SPORTS SPACES';
+
+        if (oldWord) {
+
+            oldWord.insertAdjacentElement(
+                'afterend',
+                tagline
+            );
+
+        }
+
+    }
+
+}
+
+
+/* ===============================
+   SMOOTH PROGRESS
+   =============================== */
+
+let progress = 0;
+
+const loadInterval =
+    setInterval(() => {
+
+        progress += 2;
+
+
+        if (progress >= 100) {
+
+            progress = 100;
+
+            clearInterval(
+                loadInterval
+            );
+
+            loaderFill.style.width =
+                '100%';
+
+            loaderPercent.textContent =
+                '100%';
+
+
+            /* Stay at 100% */
+
+            setTimeout(() => {
+
+                loader.classList.add(
+                    'hide'
+                );
+
+                document.documentElement
+                    .classList
+                    .remove(
+                        'no-scroll'
+                    );
+
+
+                setTimeout(() => {
+
+                    loader.remove();
+
+                    loaderStyle.remove();
+
+                }, 900);
+
+            }, 750);
+
+        }
+
+
+        loaderFill.style.width =
+            progress + '%';
+
+        loaderPercent.textContent =
+            progress + '%';
+
+
+    }, 60);
 
   /* ---------------- NAVBAR ---------------- */
   const navbar = document.getElementById('navbar');

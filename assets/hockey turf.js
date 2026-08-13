@@ -33,167 +33,85 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*=========================================
-    BEFORE & AFTER SLIDER
+    BEFORE & AFTER SLIDER - FIXED
 =========================================*/
 
-const comparisonContainer = document.getElementById("comparison-container");
-const beforeImage = document.getElementById("before-image");
-const sliderLine = document.getElementById("slider-line");
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("comparison-container");
+    const before = document.getElementById("before-image");
+    const line = document.getElementById("slider-line");
 
-let isDragging = false;
+    if (!container || !before || !line) return;
 
+    let dragging = false;
 
-//-----------------------------------------
-// UPDATE SLIDER POSITION
-//-----------------------------------------
+    // Keep the BEFORE image at the full container size and only clip it.
+    const beforeImg = before.querySelector("img");
 
-function updateSlider(x) {
-    if (!comparisonContainer || !beforeImage || !sliderLine) return;
+    function setPosition(clientX) {
+        const rect = container.getBoundingClientRect();
+        if (!rect.width) return;
 
-    const rect = comparisonContainer.getBoundingClientRect();
+        let x = clientX - rect.left;
+        x = Math.max(0, Math.min(x, rect.width));
+        const pct = (x / rect.width) * 100;
 
-    let position = x - rect.left;
+        before.style.width = "100%";
+        before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+        before.style.webkitClipPath = `inset(0 ${100 - pct}% 0 0)`;
+        line.style.left = `${pct}%`;
 
-    if (position < 0) position = 0;
+        if (beforeImg) {
+            beforeImg.style.width = `${rect.width}px`;
+            beforeImg.style.maxWidth = "none";
+            beforeImg.style.height = `${rect.height}px`;
+        }
+    }
 
-    if (position > rect.width) position = rect.width;
+    function start(clientX) {
+        dragging = true;
+        setPosition(clientX);
+    }
 
-    const percentage = (position / rect.width) * 100;
+    container.addEventListener("mousedown", e => {
+        e.preventDefault();
+        start(e.clientX);
+    });
 
-    beforeImage.style.width = percentage + "%";
-
-    sliderLine.style.left = percentage + "%";
-}
-
-
-//-----------------------------------------
-// MOUSE EVENTS
-//-----------------------------------------
-
-if (comparisonContainer) {
-    comparisonContainer.addEventListener("mousedown", () => {
-        isDragging = true;
+    window.addEventListener("mousemove", e => {
+        if (dragging) setPosition(e.clientX);
     });
 
     window.addEventListener("mouseup", () => {
-        isDragging = false;
+        dragging = false;
     });
 
-    window.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        updateSlider(e.clientX);
-    });
+    container.addEventListener("touchstart", e => {
+        start(e.touches[0].clientX);
+    }, { passive: true });
 
-
-    //-----------------------------------------
-    // TOUCH EVENTS
-    //-----------------------------------------
-
-    comparisonContainer.addEventListener("touchstart", () => {
-        isDragging = true;
-    });
+    container.addEventListener("touchmove", e => {
+        if (dragging) setPosition(e.touches[0].clientX);
+    }, { passive: true });
 
     window.addEventListener("touchend", () => {
-        isDragging = false;
+        dragging = false;
     });
 
-    window.addEventListener("touchmove", (e) => {
-        if (!isDragging) return;
-        updateSlider(e.touches[0].clientX);
+    container.addEventListener("click", e => {
+        setPosition(e.clientX);
     });
 
-
-    //-----------------------------------------
-    // CLICK TO MOVE
-    //-----------------------------------------
-
-    comparisonContainer.addEventListener("click", (e) => {
-        updateSlider(e.clientX);
-    });
-}
-
-
-//-----------------------------------------
-// INITIAL POSITION
-//-----------------------------------------
-
-window.addEventListener("load", () => {
-    if (beforeImage && sliderLine) {
-        beforeImage.style.width = "50%";
-        sliderLine.style.left = "50%";
-    }
-});
-
-
-//-----------------------------------------
-// WINDOW RESIZE
-//-----------------------------------------
-
-window.addEventListener("resize", () => {
-    if (beforeImage && sliderLine) {
-        beforeImage.style.width = "50%";
-        sliderLine.style.left = "50%";
-    }
-});
-
-/*=========================================
-            FAQ ACCORDION
-=========================================*/
-
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question");
-
-    if (question) {
-        question.addEventListener("click", () => {
-            const isActive = item.classList.contains("active");
-
-            // Close all FAQs
-            faqItems.forEach((faq) => {
-                faq.classList.remove("active");
-                const ans = faq.querySelector(".faq-answer");
-                if (ans) ans.style.maxHeight = null;
-
-                const icon = faq.querySelector("i");
-                if (icon) {
-                    icon.classList.remove("fa-minus");
-                    icon.classList.add("fa-plus");
-                }
-            });
-
-            // Open selected FAQ
-            if (!isActive) {
-                item.classList.add("active");
-                const answer = item.querySelector(".faq-answer");
-                if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
-
-                const icon = item.querySelector("i");
-                if (icon) {
-                    icon.classList.remove("fa-plus");
-                    icon.classList.add("fa-minus");
-                }
-            }
+    function reset() {
+        requestAnimationFrame(() => {
+            setPosition(container.getBoundingClientRect().left + container.getBoundingClientRect().width / 2);
         });
     }
+
+    window.addEventListener("load", reset);
+    window.addEventListener("resize", reset);
+    reset();
 });
 
 
-/*=========================================
-        OPEN FIRST FAQ ON PAGE LOAD
-=========================================*/
 
-window.addEventListener("DOMContentLoaded", () => {
-    const firstFAQ = document.querySelector(".faq-item.active");
-
-    if (firstFAQ) {
-        const answer = firstFAQ.querySelector(".faq-answer");
-        if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
-
-        const icon = firstFAQ.querySelector("i");
-        if (icon) {
-            icon.classList.remove("fa-plus");
-            icon.classList.add("fa-minus");
-        }
-    }
-});

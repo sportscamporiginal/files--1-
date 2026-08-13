@@ -330,7 +330,7 @@
 
 .hero-image::after{
 
-    content:"Premium Wooden/Acrylic Courts";
+    content:"Premium Wooden & Acrylic Courts";
 
     position:absolute;
 
@@ -1142,75 +1142,135 @@ grid-template-columns:1fr;
 =========================================*/
 
 .court-structure{
+
     padding:110px 0;
+
     background:#F8FBF9;
+
 }
 
 .structure-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:start;
-    margin-top:60px;
-}
 
-.structure-image{
-    position:sticky;
-    top:120px;
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-top:60px;
+
 }
 
 .structure-image img{
+
     width:100%;
+
     border-radius:24px;
+
     box-shadow:0 20px 50px rgba(0,0,0,.10);
+
 }
 
 .structure-content{
+
     display:flex;
+
     flex-direction:column;
-    gap:16px;
+
+    gap:25px;
+
 }
 
 .layer-card{
+
     display:flex;
-    align-items:flex-start;
-    gap:18px;
-    padding:20px 22px;
-    border-radius:18px;
+
+    gap:25px;
+
+    padding:28px;
+
+    border-radius:22px;
+
     background:#fff;
-    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.06);
+
     transition:.35s;
+
 }
 
 .layer-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 18px 40px rgba(0,0,0,.10);
+
+    transform:translateY(-8px);
+
 }
 
 .layer-number{
-    width:54px;
-    height:54px;
-    min-width:54px;
+
+    width:65px;
+
+    height:65px;
+
+    flex-shrink:0;
+
     border-radius:50%;
+
     background:var(--primary-color);
+
     color:#fff;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
-    font-size:18px;
+
+    font-size:22px;
+
     font-weight:700;
+
 }
 
 .layer-card h3{
-    font-size:22px;
-    margin-bottom:8px;
-    color:#111827;
+
+    margin-bottom:12px;
+
 }
 
 .layer-card p{
+
     font-size:15px;
-    line-height:1.7;
-    color:#667085;
+
+}
+
+/*=========================
+Responsive
+=========================*/
+
+@media(max-width:992px){
+
+.structure-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.layer-card{
+
+flex-direction:column;
+
+text-align:center;
+
+align-items:center;
+
+}
+
 }
 
 /*=========================================
@@ -4640,25 +4700,3 @@ background:#FCFEFD;
 
 }
 
-
-
-/* ===== ChatGPT Mobile Responsive Patch ===== */
-@media (max-width:768px){
-.container{width:min(100%,94%);}
-.hero-wrapper,.overview-wrapper,.structure-wrapper,.specification-wrapper,.cta-wrapper{grid-template-columns:1fr!important;gap:32px!important;}
-.hero-content,.overview-content,.cta-content{text-align:center;}
-.hero-buttons,.cta-buttons{flex-direction:column!important;}
-.hero-buttons a,.cta-buttons a{width:100%!important;min-width:0!important;}
-.hero-image,.overview-image,.structure-image,.cta-image,.court-blueprint{width:100%;max-width:100%;}
-.hero-image img,.overview-image img,.structure-image img,.cta-image img,.court-blueprint img{max-width:100%;height:auto!important;}
-.court-wrapper,.colour-wrapper,.overview-features,.hero-highlights,.why-stats,.comparison-benefits,.cta-features{grid-template-columns:1fr!important;}
-.materials-timeline,.process-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.comparison-container{height:auto!important;aspect-ratio:16/9;}
-.feature-left,.layer-card,.spec-item{flex-direction:column;align-items:flex-start;}
-}
-@media (max-width:480px){
-h1{font-size:30px!important;}
-.cta-content h2{font-size:38px!important;}
-.cta-content h2 span{font-size:46px!important;}
-section{padding:60px 0!important;}
-}

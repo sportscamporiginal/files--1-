@@ -2955,6 +2955,7 @@ user-select: none;
     box-shadow:0 30px 70px rgba(0,0,0,.15);
 
     cursor:ew-resize;
+    touch-action:none;
 
 }
 
@@ -2988,11 +2989,14 @@ user-select: none;
 
 .before-image img{
 
+    position:absolute;
+    top:0;
+    left:0;
     width:100%;
-
+    max-width:none;
     height:100%;
-
     object-fit:cover;
+    display:block;
 
 }
 
@@ -5728,5 +5732,83 @@ section{padding:60px 0!important;}
 
     .grass-body {
         padding: 18px;
+    }
+}
+
+
+/* =========================================================
+   BEFORE & AFTER SLIDER - FINAL OVERRIDE
+   This must remain at the END of the stylesheet.
+========================================================= */
+#comparison-container.comparison-container {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    cursor: ew-resize !important;
+    touch-action: none !important;
+}
+
+#comparison-container > img.comparison-image {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+#comparison-container #before-image {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    clip-path: inset(0 50% 0 0);
+    -webkit-clip-path: inset(0 50% 0 0);
+    z-index: 2 !important;
+    padding: 0 !important;
+}
+
+#comparison-container #before-image img.comparison-image {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+}
+
+#comparison-container #slider-line {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    width: 4px !important;
+    height: 100% !important;
+    padding: 0 !important;
+    transform: translateX(-50%) !important;
+    z-index: 20 !important;
+    pointer-events: none !important;
+}
+
+#comparison-container #slider-line .slider-button {
+    pointer-events: auto !important;
+    touch-action: none !important;
+}
+
+@media (max-width: 576px) {
+    #comparison-container.comparison-container {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        padding: 0 !important;
     }
 }

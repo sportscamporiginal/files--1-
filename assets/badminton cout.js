@@ -1,12 +1,11 @@
 // ======================================
-// PADEL HERO & INTERACTION SCRIPT
+// BADMINTON HERO & INTERACTION SCRIPT
 // ======================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
     // Page Loaded Class
     document.body.classList.add("page-loaded");
-
 
     // Hero Image Floating Animation
     const heroImage = document.querySelector(".hero-image img");
@@ -18,172 +17,123 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(() => {
             position += direction * 0.3;
 
-            if (position >= 8) {
-                direction = -1;
-            }
-
-            if (position <= 0) {
-                direction = 1;
-            }
+            if (position >= 8) direction = -1;
+            if (position <= 0) direction = 1;
 
             heroImage.style.transform = `translateY(${position}px)`;
         }, 20);
     }
 
-});
+    // =========================================
+    // BEFORE & AFTER SLIDER
+    // =========================================
 
-/*=========================================
-    BEFORE & AFTER SLIDER
-=========================================*/
+    const container = document.getElementById("comparison-container");
+    const before = document.getElementById("before-image");
+    const slider = document.getElementById("slider-line");
 
-const comparisonContainer = document.getElementById("comparison-container");
-const beforeImage = document.getElementById("before-image");
-const sliderLine = document.getElementById("slider-line");
+    if (!container || !before || !slider) {
+        console.warn("Before/After slider elements not found.");
+        return;
+    }
 
-let isDragging = false;
+    let isDragging = false;
 
+    function moveSlider(clientX) {
+        const rect = container.getBoundingClientRect();
 
-//-----------------------------------------
-// UPDATE SLIDER POSITION
-//-----------------------------------------
+        if (!rect.width) return;
 
-function updateSlider(x) {
-    if (!comparisonContainer || !beforeImage || !sliderLine) return;
+        let x = clientX - rect.left;
+        x = Math.max(0, Math.min(x, rect.width));
 
-    const rect = comparisonContainer.getBoundingClientRect();
+        const percentage = (x / rect.width) * 100;
 
-    let position = x - rect.left;
+        before.style.width = percentage + "%";
+        slider.style.left = percentage + "%";
+    }
 
-    if (position < 0) position = 0;
-
-    if (position > rect.width) position = rect.width;
-
-    const percentage = (position / rect.width) * 100;
-
-    beforeImage.style.width = percentage + "%";
-
-    sliderLine.style.left = percentage + "%";
-}
-
-
-//-----------------------------------------
-// MOUSE EVENTS
-//-----------------------------------------
-
-if (comparisonContainer) {
-    comparisonContainer.addEventListener("mousedown", () => {
+    // Mouse
+    container.addEventListener("mousedown", (e) => {
         isDragging = true;
+        moveSlider(e.clientX);
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        moveSlider(e.clientX);
     });
 
     window.addEventListener("mouseup", () => {
         isDragging = false;
     });
 
-    window.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        updateSlider(e.clientX);
-    });
-
-
-    //-----------------------------------------
-    // TOUCH EVENTS
-    //-----------------------------------------
-
-    comparisonContainer.addEventListener("touchstart", () => {
+    // Touch / Mobile
+    container.addEventListener("touchstart", (e) => {
         isDragging = true;
-    });
+        moveSlider(e.touches[0].clientX);
+    }, { passive: true });
+
+    container.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        moveSlider(e.touches[0].clientX);
+    }, { passive: true });
 
     window.addEventListener("touchend", () => {
         isDragging = false;
     });
 
-    window.addEventListener("touchmove", (e) => {
-        if (!isDragging) return;
-        updateSlider(e.touches[0].clientX);
+    // Click to move
+    container.addEventListener("click", (e) => {
+        moveSlider(e.clientX);
     });
 
-
-    //-----------------------------------------
-    // CLICK TO MOVE
-    //-----------------------------------------
-
-    comparisonContainer.addEventListener("click", (e) => {
-        updateSlider(e.clientX);
-    });
-}
-
-
-//-----------------------------------------
-// INITIAL POSITION
-//-----------------------------------------
-
-window.addEventListener("load", () => {
-    if (beforeImage && sliderLine) {
-        beforeImage.style.width = "50%";
-        sliderLine.style.left = "50%";
+    // Initial position
+    function resetSlider() {
+        before.style.width = "50%";
+        slider.style.left = "50%";
     }
-});
 
+    resetSlider();
 
-//-----------------------------------------
-// WINDOW RESIZE
-//-----------------------------------------
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll(".faq-item");
 
-window.addEventListener("resize", () => {
-    if (beforeImage && sliderLine) {
-        beforeImage.style.width = "50%";
-        sliderLine.style.left = "50%";
-    }
-});
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
 
-/*=========================================
-            FAQ ACCORDION
-=========================================*/
+        if (question) {
+            question.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
 
-const faqItems = document.querySelectorAll(".faq-item");
+                faqItems.forEach((faq) => {
+                    faq.classList.remove("active");
+                    const ans = faq.querySelector(".faq-answer");
+                    if (ans) ans.style.maxHeight = null;
 
-faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question");
+                    const icon = faq.querySelector("i");
+                    if (icon) {
+                        icon.classList.remove("fa-minus");
+                        icon.classList.add("fa-plus");
+                    }
+                });
 
-    if (question) {
-        question.addEventListener("click", () => {
-            const isActive = item.classList.contains("active");
+                if (!isActive) {
+                    item.classList.add("active");
+                    const answer = item.querySelector(".faq-answer");
+                    if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
 
-            // Close all FAQs
-            faqItems.forEach((faq) => {
-                faq.classList.remove("active");
-                const ans = faq.querySelector(".faq-answer");
-                if (ans) ans.style.maxHeight = null;
-
-                const icon = faq.querySelector("i");
-                if (icon) {
-                    icon.classList.remove("fa-minus");
-                    icon.classList.add("fa-plus");
+                    const icon = item.querySelector("i");
+                    if (icon) {
+                        icon.classList.remove("fa-plus");
+                        icon.classList.add("fa-minus");
+                    }
                 }
             });
+        }
+    });
 
-            // Open selected FAQ
-            if (!isActive) {
-                item.classList.add("active");
-                const answer = item.querySelector(".faq-answer");
-                if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
-
-                const icon = item.querySelector("i");
-                if (icon) {
-                    icon.classList.remove("fa-plus");
-                    icon.classList.add("fa-minus");
-                }
-            }
-        });
-    }
-});
-
-
-/*=========================================
-        OPEN FIRST FAQ ON PAGE LOAD
-=========================================*/
-
-window.addEventListener("DOMContentLoaded", () => {
+    // Open first active FAQ on page load
     const firstFAQ = document.querySelector(".faq-item.active");
 
     if (firstFAQ) {

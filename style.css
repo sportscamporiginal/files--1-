@@ -2450,3 +2450,35 @@ font-size:16px;
         margin-top: 0 !important;
     }
 }
+/* =========================================
+   MOBILE - REMOVE GAP ABOVE COURT ANIMATION
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* Products section ke neeche ka extra blank space */
+    .products {
+        padding-bottom: 15px !important;
+    }
+
+    /* Court animation ko immediately upar lao */
+    .court-build {
+        padding-top: 15px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .court-build-grid {
+        gap: 20px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .court-build-visual {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .court-stage {
+        margin-top: 0 !important;
+    }
+}

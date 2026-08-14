@@ -956,6 +956,175 @@ const loadInterval =
 
 });
 
+/* ==========================================================================
+   COURT BUILD ANIMATION — tiles fly in from all sides and interlock into
+   a finished, line-marked court. Self-contained: builds its own DOM,
+   watches its own IntersectionObserver, and offers a Replay button.
+   Grid density is responsive so tiles stay legible on small phones.
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', function () {
+
+  const stage = document.getElementById('courtStage');
+  const section = document.getElementById('courtBuild');
+  const replayBtn = document.getElementById('courtReplayBtn');
+  if (!stage || !section) return;
+
+  const GREENS = ['#079b46', '#0aa851', '#0bb457', '#049341'];
+  const BLUE = '#0e3a5c';
+  const BLUE_LIGHT = '#134f78';
+
+  let COLS = 10, ROWS = 6;
+  let centerC = (COLS - 1) / 2;
+  let centerR = (ROWS - 1) / 2;
+
+  function gridSizeForViewport() {
+    const w = window.innerWidth;
+    if (w <= 420) return { c: 6, r: 6 };
+    if (w <= 720) return { c: 8, r: 6 };
+    return { c: 10, r: 6 };
+  }
+
+  let tiles = [];
+  let linePaths = [];
+  let badgeEl = null;
+  let playTimers = [];
+
+  function clearTimers() {
+    playTimers.forEach(t => clearTimeout(t));
+    playTimers = [];
+  }
+
+  function buildStage() {
+    const size = gridSizeForViewport();
+    COLS = size.c; ROWS = size.r;
+    centerC = (COLS - 1) / 2;
+    centerR = (ROWS - 1) / 2;
+
+    stage.innerHTML = '';
+    stage.classList.remove('is-done');
+    tiles = [];
+    linePaths = [];
+
+    const wrap = document.createElement('div');
+    wrap.className = 'court-tiles';
+    wrap.style.gridTemplateColumns = 'repeat(' + COLS + ', 1fr)';
+    wrap.style.gridTemplateRows = 'repeat(' + ROWS + ', 1fr)';
+
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) {
+        const tile = document.createElement('div');
+        tile.className = 'court-tile';
+
+        const isBorder = r === 0 || r === ROWS - 1 || c === 0 || c === COLS - 1;
+        tile.style.background = isBorder
+          ? ((r + c) % 2 === 0 ? BLUE : BLUE_LIGHT)
+          : GREENS[(r * COLS + c) % GREENS.length];
+
+        const dx = c - centerC;
+        const dy = r - centerR;
+        const tx = Math.round(dx * 34 + (dx >= 0 ? 70 : -70));
+        const ty = Math.round(dy * 34 + (dy >= 0 ? 70 : -70));
+        const rot = Math.round((dx + dy) * 7 + (Math.random() * 20 - 10));
+        const delay = Math.round((r + c) * 42 + Math.random() * 70);
+
+        tile.style.setProperty('--tx', tx + 'px');
+        tile.style.setProperty('--ty', ty + 'px');
+        tile.style.setProperty('--rot', rot + 'deg');
+        tile.style.transitionDelay = delay + 'ms';
+
+        wrap.appendChild(tile);
+        tiles.push(tile);
+      }
+    }
+    stage.appendChild(wrap);
+
+    /* Court line markings, drawn on top once tiles have landed */
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svgEl = document.createElementNS(svgNS, 'svg');
+    svgEl.setAttribute('class', 'court-lines');
+    svgEl.setAttribute('viewBox', '0 0 1000 600');
+    svgEl.setAttribute('preserveAspectRatio', 'none');
+
+    function mkPath(d) {
+      const p = document.createElementNS(svgNS, 'path');
+      p.setAttribute('d', d);
+      p.setAttribute('class', 'court-line-path');
+      svgEl.appendChild(p);
+      linePaths.push(p);
+    }
+    mkPath('M40,40 L960,40 L960,560 L40,560 Z');
+    mkPath('M500,40 L500,560');
+    mkPath('M40,180 L960,180');
+    mkPath('M40,420 L960,420');
+    mkPath('M270,40 L270,560');
+    mkPath('M730,40 L730,560');
+
+    stage.appendChild(svgEl);
+
+    /* Ready badge */
+    badgeEl = document.createElement('div');
+    badgeEl.className = 'court-badge';
+    badgeEl.innerHTML =
+      '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Court Ready</span>';
+    stage.appendChild(badgeEl);
+  }
+
+  function play() {
+    clearTimers();
+    buildStage();
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        tiles.forEach(function (t) { t.classList.add('is-set'); });
+
+        const maxDelay = (ROWS + COLS) * 42 + 900;
+        playTimers.push(setTimeout(function () {
+          linePaths.forEach(function (p, i) {
+            playTimers.push(setTimeout(function () {
+              p.classList.add('is-drawn');
+            }, i * 90));
+          });
+          playTimers.push(setTimeout(function () {
+            if (badgeEl) badgeEl.classList.add('is-visible');
+            stage.classList.add('is-done');
+          }, linePaths.length * 90 + 500));
+        }, maxDelay));
+      });
+    });
+  }
+
+  let played = false;
+  let resizeTimer = null;
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting && !played) {
+        played = true;
+        play();
+      }
+    });
+  }, { threshold: 0.2 });
+  io.observe(section);
+
+  if (replayBtn) {
+    replayBtn.addEventListener('click', function () {
+      played = true;
+      play();
+    });
+  }
+
+  /* Rebuild with the right tile density if the viewport crosses a
+     breakpoint (e.g. orientation change) after the animation already played */
+  window.addEventListener('resize', function () {
+    if (!played) return;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      const size = gridSizeForViewport();
+      if (size.c !== COLS || size.r !== ROWS) play();
+    }, 300);
+  });
+});
+
+
 /* Scroll Progress */
 
 const progressBar = document.querySelector(".scroll-progress");

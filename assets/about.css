@@ -320,3 +320,40 @@ section{ padding:110px 0; position:relative; }
     align-items:center;
     justify-content:center;
 }
+/* ==============================
+   ABOUT HERO - REDUCE TOP SPACE
+   ============================== */
+
+.about-hero {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+.about-hero .hero-inner {
+    padding-top: 0;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .about-hero {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .about-hero {
+        padding-top: 60px;
+        padding-bottom: 55px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .about-hero {
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+}
